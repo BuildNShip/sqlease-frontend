@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.scss'
 import LoadingIcons from 'react-loading-icons'
 import NavBar from './components/NavBar/NavBar'
-import { faB, faCheckSquare, faCoffee, faDatabase, faHouseLaptop, faS, faWindowMaximize } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [isLoading, setLoading] = useState(false)
@@ -51,7 +50,7 @@ const OutputBox = ()=> {
     setCopyStatus("Copied!!")
     setTimeout(()=>{
       setCopyStatus("Copy Code")
-    },1000)
+    },2000)
     console.log(outputText);
   };
   return(
