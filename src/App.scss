@@ -1,0 +1,141 @@
+@use './assets/variables/variables.scss';
+.App{
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    z-index: 10;
+    h1{
+        font-size: 4rem;
+        letter-spacing: -3px;
+        margin: 0;
+    }
+    h2{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}
+.prompt-box{
+    border: 1px solid hsla(0,0%,100%,.1);
+    background-color: variables.$dark-theme-light;
+    border-radius: 16px;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    width: 610px;
+    will-change: transform;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1.6em;
+    text-align: start;
+    color: hsla(0,0%,100%,.75);
+    text-decoration: none;
+    text-transform: none;
+    margin: 20px 0;
+}
+
+.output-container{
+    display: flex;
+    justify-content: center;
+}
+
+.output-box{
+    border: 1px solid hsla(0,0%,100%,.1);
+    background-color: #baf9dc;
+    border-radius: 16px;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    width: 610px;
+    will-change: transform;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1.6em;
+    text-align: start;
+    color: #1b7149;
+    text-decoration: none;
+    text-transform: none;
+    margin: 20px 0;
+    margin-bottom: 5rem;
+    // display: none
+
+}
+
+.rounded-btn {
+    border-radius: 50px !important;
+}
+
+.violet-btn{
+    background-color: blueviolet;
+    color: white;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background-color: rgb(154, 69, 235);
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+    }
+}
+.loader{
+    width: 30px;
+    height: 10px;
+}
+.buy-me-a-coffee{
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding:10px;
+    border-radius: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    img{
+        height: 45px;
+        width: 45px;
+    }
+}  
+.copycode-container{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: max-content;
+    svg{
+        width: 18px;
+    }
+    p{
+        font-size: 13px;
+        font-weight: 800;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .App{
+        max-width: 100%;
+        padding: 10px;
+        h1{
+            letter-spacing: -1px;
+            padding: 10px;
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+    }
+    .prompt-box,.output-box{
+        width: 80%;
+    }
+    .buy-me-a-coffee{
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

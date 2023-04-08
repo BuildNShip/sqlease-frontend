@@ -1,0 +1,14 @@
+@use '../../assets/variables/variables.scss';
+
+.nav-container{
+    text-align: center;
+    background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    h1{
+        font-size: 20px;
+    }
+}
