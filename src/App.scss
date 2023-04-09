@@ -38,12 +38,16 @@
 
 .output-container{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        text-align: center;
+    }
 }
 
 .output-box{
     border: 1px solid hsla(0,0%,100%,.1);
-    background-color: #baf9dc;
+    background-color: #0e0d0d;
     border-radius: 16px;
     height: 150px;
     padding: 20px;
@@ -57,12 +61,14 @@
     letter-spacing: 0;
     line-height: 1.6em;
     text-align: start;
-    color: #1b7149;
+    // color: #1b7149;
     text-decoration: none;
     text-transform: none;
-    margin: 20px 0;
     margin-bottom: 5rem;
     // display: none
+    p{
+        font-weight: 600;
+    }
 
 }
 
@@ -104,15 +110,18 @@
 .copycode-container{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     cursor: pointer;
-    width: max-content;
+    width: 100%;
     svg{
         width: 18px;
+        color: azure;
     }
     p{
         font-size: 13px;
         font-weight: 800;
         margin: 0;
+        color: azure;
     }
 }
 

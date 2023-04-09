@@ -8,7 +8,7 @@ function App() {
   const [output, setOutput]  = useState(false)
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="App">
         <h1>Generate SQL Queries from Natural Language</h1>
         <h2>Write a quick sentence about what you want the query to be about (ex. Find name of all students in the table, Fetch current date-time from the system, create a table called heroes).</h2>
@@ -44,17 +44,18 @@ function App() {
 
 
 const OutputBox = ()=> {
-  const [copyStatus,setCopyStatus] = useState("Copy Code")
+  const [copyStatus,setCopyStatus] = useState("")
   const [outputText,setOutputTEXT] = useState("This is output")
   const handleClick = () => {
     setCopyStatus("Copied!!")
     setTimeout(()=>{
-      setCopyStatus("Copy Code")
+      setCopyStatus("")
     },2000)
     console.log(outputText);
   };
   return(
     <div className="output-container">
+      <h2>Output</h2>
     <div className="output-box">
       <div 
         className="copycode-container"
