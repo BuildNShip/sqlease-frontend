@@ -1,12 +1,15 @@
 {
+  "homepage": "https://BuildNShip.github.io/sqlease-frontend",
   "name": "sql-ease",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
+    "predeploy":"vite build",
+    "deploy":"gh-pages -d dist",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview" 
   },
   "dependencies": {
     "react": "^18.2.0",
