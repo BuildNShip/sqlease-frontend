@@ -73,7 +73,7 @@ function App() {
       <a
         href='https://www.buymeacoffee.com/arjunms'
         className="buy-me-a-coffee">
-        <img src="./public/coffee-icon.png" alt="buy-me-a-coffee" />
+        <img src="./coffee-icon.png" alt="buy-me-a-coffee" />
       </a>
     </>
   )
