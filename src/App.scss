@@ -48,6 +48,7 @@
 }
 
 .output-box{
+    width: 80%;
     border: 1px solid hsla(0,0%,100%,.1);
     background-color: #0e0d0d;
     border-radius: 16px;
@@ -63,14 +64,18 @@
     letter-spacing: 0;
     line-height: 1.6em;
     text-align: start;
-    // color: #1b7149;
+    color: azure;
     text-decoration: none;
     text-transform: none;
     margin-bottom: 5rem;
+    position: relative;
+    // overflow: hidden;
     // display: none
-    p{
-        font-weight: 600;
-        margin: 1px 0;
+    .output-text-container{
+        p{
+            font-weight: 600;
+            margin: 1px 0;
+        }
     }
 
 }
@@ -100,11 +105,12 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    padding:10px;
+    padding:6px;
     border-radius: 50px;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 60px;
+    z-index: 999;
     img{
         height: 45px;
         width: 45px;
@@ -115,7 +121,8 @@
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
-    width: 100%;
+    right: 20px;
+    position: absolute;
     svg{
         width: 18px;
         color: azure;
@@ -125,6 +132,38 @@
         font-weight: 800;
         margin: 0;
         color: azure;
+    }
+}
+#logo{
+    width: 150px;
+}
+
+.footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    height: 3rem;
+    border-top: 1px solid rgb(81, 80, 80);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    img{
+        height: 60%;
+        margin-left: 40px;
+    }
+    .social-container{
+        width: 200px;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+        a{
+            height: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
     }
 }
 

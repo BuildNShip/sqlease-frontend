@@ -2,6 +2,9 @@ import { useState,useRef } from 'react'
 import './App.scss'
 import LoadingIcons from 'react-loading-icons'
 import NavBar from './components/NavBar/NavBar'
+import Logo from '../public/sql-ease.png'
+import BuildNShip from '../public/Purple_B_Logo.png'
+import { FaInstagram,FaTwitter,FaGithub,FaEnvelope } from "react-icons/fa";
 
 
 interface outputProps{
@@ -49,6 +52,7 @@ function App() {
     <>
       {/* <NavBar /> */}
       <div className="App">
+        <img id="logo" src={Logo} alt="logo" />
         <h1>Generate SQL Queries from Natural Language</h1>
         <h2>Write a quick sentence about what you want the query to be about (ex. Find name of all students in the table, Fetch current date-time from the system, create a table called heroes).</h2>
         <div className="prompt-container">
@@ -75,6 +79,15 @@ function App() {
         className="buy-me-a-coffee">
         <img src="./coffee-icon.png" alt="buy-me-a-coffee" />
       </a>
+      <div className="footer">
+        <img src={BuildNShip} alt="logo" /> 
+        <div className="social-container">
+          <a href="#"><FaTwitter size={25}/></a>
+          <a href="#"><FaInstagram size={25}/></a>
+          <a href="#"><FaGithub size={25}/></a>
+          <a href="#"><FaEnvelope size={25}/></a>
+        </div>
+      </div>
     </>
   )
 }
@@ -105,9 +118,11 @@ const OutputBox= (props: outputProps)=> {
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V6h2v14h11v2H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z" /></svg>
         <p>{copyStatus}</p>
         </div>
+    <div className="output-text-container">
       <p 
         id="output-text"
       >{props.data}</p>
+    </div>
     </div>
   </div>
   )
