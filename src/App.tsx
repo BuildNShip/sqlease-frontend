@@ -17,6 +17,8 @@ function App() {
   const [prompt, setPrompt] = useState('');
   const[output,setOutput] = useState('')
 
+  console.log(import.meta.env.DEV)
+
   const handlePrompt = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setPrompt(e.target.value);
   };
@@ -121,9 +123,9 @@ const OutputBox= (props: outputProps)=> {
         <p>{copyStatus}</p>
         </div>
     <div className="output-text-container">
-      <pre 
+      <p
         id="output-text"
-      >{props.data}</pre>
+      >{props.data}</p>
     </div>
     </div>
   </div>
