@@ -148,18 +148,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
-    img{
-        height: 60%;
-        margin-left: 40px;
+    background-color: rgb(0, 0, 0);
+    a{
+        width:100px ;
+        img{
+            width: 100px;
+            height: 60%;
+            margin-left: 40px;
+        }
     }
     .social-container{
-        width: 200px;
+        width: max-content;
         height: 100%;
         display: flex;
-        gap: 20px;
+        gap: 15px;
+        margin-right: 20px;
         a{
             height: 100%;
+            width: max-content;
             color: white;
             display: flex;
             align-items: center;
@@ -187,6 +193,16 @@
         img{
             width: 30px;
             height: 30px;
+        }
+    }
+    .footer{
+        a{
+            img{
+                margin-left: 14px;
+            }
+        }
+        .social-container{
+            gap: 8px;
         }
     }
 }

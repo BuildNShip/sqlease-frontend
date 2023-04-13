@@ -4,7 +4,7 @@ import LoadingIcons from 'react-loading-icons'
 import NavBar from './components/NavBar/NavBar'
 import Logo from '../public/sql-ease.png'
 import BuildNShip from '../public/Purple_B_Logo.png'
-import { FaInstagram,FaTwitter,FaGithub,FaEnvelope } from "react-icons/fa";
+import { FaInstagram,FaTwitter,FaGithub,FaTelegram } from "react-icons/fa";
 
 
 interface outputProps{
@@ -80,12 +80,14 @@ function App() {
         <img src="./coffee-icon.png" alt="buy-me-a-coffee" />
       </a>
       <div className="footer">
-        <img src={BuildNShip} alt="logo" /> 
+        <a href="https://buildnship.in/">
+          <img src={BuildNShip} alt="logo" />
+        </a>
         <div className="social-container">
-          <a href="#"><FaTwitter size={25}/></a>
-          <a href="#"><FaInstagram size={25}/></a>
-          <a href="#"><FaGithub size={25}/></a>
-          <a href="#"><FaEnvelope size={25}/></a>
+          <a href="https://twitter.com/buildnship/"><FaTwitter size={25}/></a>
+          <a href="https://instagram.com/buildnship?igshid=YmMyMTA2M2Y="><FaInstagram size={25}/></a>
+          <a href="https://github.com/BuildNShip"><FaGithub size={25}/></a>
+          <a href="https://t.me/buildnship"><FaTelegram size={25}/></a>
         </div>
       </div>
     </>
@@ -119,9 +121,9 @@ const OutputBox= (props: outputProps)=> {
         <p>{copyStatus}</p>
         </div>
     <div className="output-text-container">
-      <p 
+      <pre 
         id="output-text"
-      >{props.data}</p>
+      >{props.data}</pre>
     </div>
     </div>
   </div>
